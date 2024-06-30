@@ -47,12 +47,12 @@ function TodosPages(props) {
         getTodos()
     }
 
-    async function onUpdate(id, newData) {
+    async function onUpdate(id, newTitle) {
         const response = await fetch(`http://localhost:8000/todos/${id}`, {
             method: "PATCH",
             headers:{
                 'Content-Type': 'application/json'},
-            body: JSON.stringify({title: newData})
+            body: JSON.stringify({title: newTitle})
         })
         getTodos()
     }

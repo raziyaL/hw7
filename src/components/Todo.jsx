@@ -12,7 +12,7 @@ function Todo({todo, deleteTodo, onUpd, onStatus}) {
 
     }
     function updateTitle() {
-        onUpd(todo.id, {title });
+        onUpd(todo.id, title);
         setIsEditing(false)
     }
 
